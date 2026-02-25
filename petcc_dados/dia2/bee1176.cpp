@@ -5,7 +5,7 @@ using namespace std;
 long int fib(long int n){
     //CASO BASE
     if (n==0 || n==1){
-        n = n;
+        return n;
     }
     //CASO RECURSIVO
     return fib(n-1) + fib(n-2);
