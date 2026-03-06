@@ -9,9 +9,11 @@ int main(){
     int t;
     cin >> t;
 
+    int n;
+
     for (int i = 0; i<t; i++){
-
-
+        cin >> n;
+        cout << sum_dig(n) << endl;
     }
 
     return 0;
