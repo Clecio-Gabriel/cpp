@@ -1,7 +1,7 @@
 #include <iostream>
-
 using namespace std;
 
+int friendly(int x);
 int sum_dig(int num);
 
 int main(){
@@ -13,10 +13,25 @@ int main(){
 
     for (int i = 0; i<t; i++){
         cin >> n;
-        cout << sum_dig(n) << endl;
+        cout << friendly(n) << endl;
     }
 
     return 0;
+}
+
+int friendly(int x){
+    if (x%9!=0) return 0;
+
+    int count = 0;
+    int ini = x;
+    for (int i = 1; i<=81; i++){
+        ini = x + i;
+        if (ini == (sum_dig(ini)+x)){
+            count++;
+        }
+    }
+
+    return count;
 }
 
 int sum_dig(int num){
