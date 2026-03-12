@@ -3,6 +3,11 @@
 #include <iostream>
 #include <iterator>
 
+//////
+//  MADE BY MY PROFESSOR
+//////
+
+
 int main() {
   const std::array input{1, 5, 15, 7, 2, 6, 9, 3, -3, -5, 4};
   // const std::array input{1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1};
