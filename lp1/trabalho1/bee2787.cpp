@@ -10,7 +10,7 @@ int main(){
     int res{0};
 
     std::cin >> l
-        >> c;
+             >> c;
     
     res = blackorwhite(l,c);
     
