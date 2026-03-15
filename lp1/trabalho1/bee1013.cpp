@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 long module(long num);
 long big(long x, long y, long z);
 
