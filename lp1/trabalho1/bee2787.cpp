@@ -1,12 +1,12 @@
 #include <iostream>
 
-using u = unsigned;
+using uint = unsigned;
 
-int blackorwhite(u line, u column);
+int blackorwhite(uint line, uint column);
 
 int main(){
-    u l{0};
-    u c{0};
+    uint l{0};
+    uint c{0};
     int res{0};
 
     std::cin >> l
@@ -19,9 +19,9 @@ int main(){
 
 }
 
-int blackorwhite(u line, u column){
+int blackorwhite(uint line, uint column){
     //It's just an IsEven function in disguise
-    u sum = line+column;
+    uint sum = line+column;
     if (sum%2==0){
         return 1;
     }
