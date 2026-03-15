@@ -1,6 +1,6 @@
 #include <iostream>
 
-using uint = unsigned;
+using uint = unsigned int;
 
 int blackorwhite(uint line, uint column);
 
