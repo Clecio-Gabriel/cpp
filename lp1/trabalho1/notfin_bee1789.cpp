@@ -9,7 +9,7 @@ int main(){
         for (size_t idx_slug{0}; idx_slug < n_slugs; ++idx_slug){
             ushort slug_speed{0};
             std::cin >> slug_speed; //ler a velocidade da i-ésima lesma
-            
+            //need to understand this first
         }
 
     }
