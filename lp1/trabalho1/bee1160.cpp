@@ -35,7 +35,7 @@ int main(){
         }
 
         std::cout << time
-                  << " anos\n";
+                  << " anos.\n";
     }
 
     
