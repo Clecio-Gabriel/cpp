@@ -1,6 +1,5 @@
 #include <iostream>
 
-long module(long num);
 long big(long x, long y, long z);
 
 int main(){
@@ -23,13 +22,8 @@ int main(){
 
 }
 
-long module(long num){
-    if (num>=0) return num;
-    else return (num*-1);
-}
-
 long big(long x, long y, long z){
-    long op1 = (x + y + module((x-y)))/2;
+    long op1 = (x + y + std::abs(x-y))/2;
     if (op1>z){
         return op1;
     }
