@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 
 using string = std::string;
 
@@ -14,6 +15,8 @@ int main(){
         if (input.compare(end) == 0){
             break;
         }
+        std::cout << isTaut(input) << "\n";
+        
     }
     
 
@@ -21,5 +24,12 @@ int main(){
 }
 
 char isTaut(string in){
-    bool taut = false;
+    bool taut = true;
+    char check = in[0];
+
+    for (int i = 1; i<=in.size(); i++){
+        
+    }
+
+    return 'Y';
 }
