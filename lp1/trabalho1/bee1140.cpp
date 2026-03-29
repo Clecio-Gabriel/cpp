@@ -25,11 +25,22 @@ int main(){
 
 char isTaut(string in){
     bool taut = true;
-    char check = in[0];
+    int input_size = in.length();
+    int check = std::toupper(in[0]);
 
-    for (int i = 1; i<=in.size(); i++){
-        
+    for (int i = 1; i<input_size; i++){
+        int ascii_elem = in[i];
+        if (ascii_elem==32){
+            int ascii_next_e = std::toupper(in[i+1]);
+            if (ascii_next_e!=check){
+                taut = false;
+                break;
+            }
+        }
     }
 
+    if (taut==false){
+        return 'N';
+    }
     return 'Y';
 }
