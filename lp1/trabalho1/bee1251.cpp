@@ -25,6 +25,7 @@ int main(){
                       << " "
                       << element.first.first << "\n";
         }
+        std::cout << "\n";
     }
 
     return 0;
