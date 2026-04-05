@@ -29,6 +29,7 @@ int reverse(intPairVector &vec, int start_idx, int end_idx);
 
 int main(){
 
+    bool firstTime = true;
     string input {};
     
     while (std::getline(std::cin >> std::ws, input)){
@@ -37,15 +38,23 @@ int main(){
         getFrequency(input, result);
         InsertionSort<intPairVector, intPair>(result, result.size());
         diffSort(result);
-
-        std::cout << "\n";
+        
+        if (firstTime){
+            firstTime = false;
+        }
+        else{
+            std::cout << "\n";
+        }
+        
         for (auto element : result){
             std::cout << element.second
                       << " "
                       << element.first
                       << "\n";
         }
+
     }
+    
 
     return 0;
 }
