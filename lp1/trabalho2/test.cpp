@@ -8,23 +8,30 @@ using intVec = std::vector <int>;
 
 template <class InputIt, class Equal>
 InputIt unique(InputIt first, InputIt last, Equal eq) {
-  auto left{first};
-  auto end{last};
+  auto slow{first+1};
+  auto fast{slow+1};
 
-  while(left!=end){
-    auto right{end};
-    while (right!=left){
-      if (eq(*left, *right)){
-        end--;
-        std::iter_swap(end, right);
+  while (fast!=last){
+    auto runner{first};
+    bool isUnique{true};
+    
+    while (runner!=slow){
+      if (eq(*runner, *fast)){
+        isUnique = false;
+        break;
       }
-      right--;
+      runner++;
     }
-    left++;
+
+    if (isUnique){
+      std::iter_swap(fast, slow);
+      slow++;
+    }
+
+    fast++;
   }
 
-
-  return end;
+  return slow;
 }
 
 int main(){
