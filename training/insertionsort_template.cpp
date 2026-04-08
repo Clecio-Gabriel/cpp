@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+
+//try to make with iterators
 template <typename typestr, typename type>
 void InsertionSort(typestr &structure, int end, char op){
 
