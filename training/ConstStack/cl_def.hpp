@@ -9,11 +9,11 @@
 
 template <class Itr>
 class Iters{
-    protected:
     Itr start;
     Itr end;
     Itr runner;
 
+    protected:
     //DEFAULT CONSTRUCTOR
         Iters() {};
 
