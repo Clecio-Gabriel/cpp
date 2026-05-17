@@ -1,0 +1,10 @@
+/mnt/c/Users/Clécio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/CMakeFiles/answersl.dir
+/mnt/c/Users/Clécio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/CMakeFiles/run_test.dir
+/mnt/c/Users/Clécio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Clécio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Clécio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/includes/CMakeFiles/activity_lib.dir
+/mnt/c/Users/Clécio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/includes/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Clécio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/includes/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Clécio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/tests/CMakeFiles/tester.dir
+/mnt/c/Users/Clécio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/tests/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Clécio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/tests/CMakeFiles/rebuild_cache.dir

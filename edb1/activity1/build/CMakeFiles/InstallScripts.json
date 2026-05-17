@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/c/Users/Cl\u00e9cio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/cmake_install.cmake",
+		"/mnt/c/Users/Cl\u00e9cio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/includes/cmake_install.cmake",
+		"/mnt/c/Users/Cl\u00e9cio Gabriel/Documents/_VSCode/c++/cpp/edb1/activity1/build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
