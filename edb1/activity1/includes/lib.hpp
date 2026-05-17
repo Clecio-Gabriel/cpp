@@ -1,6 +1,9 @@
 #ifndef ACT_LIB
 #define ACT_LIB
 
+#define EXIT_SUCCESS 0
+#define EXIT_FAILURE 1
+
 #include <iostream> 
 #include <stdexcept>
 
@@ -37,6 +40,13 @@ struct CircList {
     Node* tail = nullptr; // tail->next == head
     int size = 0;
 };
+
+//  DEBUGGING METHODS (WASN'T IMPLEMENTED BY ME)
+void limpar_lista_simples(LinkedList& l);
+void limpar_lista_dupla(DLinkedList& l);
+void limpar_lista_circular(CircList& c);
+
+//======= QUESTIONS
 
 // [ 1 ] INVERTE()
 //===TIME COMPLEXITY: O(n)
