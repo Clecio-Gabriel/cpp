@@ -8,8 +8,6 @@ void inverte(LinkedList& l){
     if (l.head==nullptr){
         return;
     }
-
-    Node* ptr;
     
 
 }
@@ -39,7 +37,58 @@ void rotaciona(CircList& c, int k){
 //===TIME COMPLEXITY: O(1)
 //===SPACE COMPLEXITY: O(1)
 void enqueue_priority(DLinkedList& l, int data, int priority){
+    DNode* temp = new DNode (data, priority);
+    l.size++;
+    
+    if (l.head == nullptr){
+        l.head = temp;
+        l.tail = temp;
 
+        if (priority == 1){
+            l.priority_tail = temp;
+        }
+
+        return;
+    }
+
+    if (priority==0){
+        temp->prev = l.tail;
+
+        l.tail->next = temp;
+        l.tail = temp;
+    }
+    else if(priority==1){
+
+        if (l.priority_tail==nullptr){
+            temp->next = l.head;
+            
+            l.head->prev = temp;
+
+            l.head = temp;
+            l.priority_tail = temp;
+        }
+        else{
+            temp->prev = l.priority_tail;
+
+            // ⇒ (l.priority_tail==l.tail)
+            if (l.priority_tail->next == nullptr){
+                l.tail = temp;
+            }
+            
+            else{
+                l.priority_tail->next->prev = temp;
+                temp->next = l.priority_tail->next;
+            }
+
+            l.priority_tail->next = temp;
+            l.priority_tail = temp;
+        }
+
+    }
+    else{
+        throw std::invalid_argument("[enqueue_priority()]: invalid priority argument.");
+    }
+    
 }
 
 // [ 4 ] MERGE()
@@ -58,7 +107,7 @@ LinkedList merge(LinkedList& a, LinkedList& b){
             ptr->next = a.head;
             a.head = a.head->next;
         }
-        else if(b.head->data < a.head->data){
+        else{
             ptr->next = b.head;
             b.head = b.head->next;
         }
@@ -77,11 +126,27 @@ LinkedList merge(LinkedList& a, LinkedList& b){
     return a;
 }
 
-// [ 5 ] TEM_CICLO()
+// [ 5 ] TEM_CICLO()    
 //===TIME COMPLEXITY: O(n)
 //===SPACE COMPLEXITY: O(1)
 bool tem_ciclo(const LinkedList& l){
-    bool res;
 
-    return res;
+    //  if emptylist or list with only one element that doesn't cycle
+    if (l.head==nullptr or l.head->next==nullptr){
+        return false;
+    }
+
+    auto slow {l.head};
+    auto fast {l.head};
+
+    while (fast != nullptr and fast->next!=nullptr){
+        fast = fast->next->next;
+        slow = slow->next;
+
+        if (fast==slow){
+            return true;
+        }
+    }
+
+    return false;
 }

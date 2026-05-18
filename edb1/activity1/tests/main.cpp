@@ -6,9 +6,9 @@
 //MUDE ALGUM CASO PARA "YES" PARA TESTAR ALGUM CASO ESPECÍFICO
 #define INVERTE NO
 #define ROTACIONA YES
-#define ENQUEUE_PRIORITY NO
+#define ENQUEUE_PRIORITY YES
 #define MERGE YES
-#define TEM_CICLO NO
+#define TEM_CICLO YES
 
 int main(){
 
@@ -111,7 +111,7 @@ int main(){
     limpar_lista_dupla(dl);
 
     // ---- 2. CASO DE BORDA: INSERÇÃO EM LISTA VAZIA ----
-    std::cout << "-> TIPO: Caso de Borda (Insercao em Fila Vazia)\n";
+    std::cout << "\n-> TIPO: Caso de Borda (Insercao em Fila Vazia)\n";
     DLinkedList dl_vazia;
     enqueue_priority(dl_vazia, 99, 1); // Insere alta prioridade em fila vazia
     std::cout << "Fila (Esperado: Head e Tail apontando para 99): ";
@@ -145,7 +145,7 @@ int main(){
     limpar_lista_simples(mesclada); 
 
     // ---- 2. CASO DE BORDA: UMA DAS LISTAS VAZIA ----
-    std::cout << "-> TIPO: Caso de Borda (Uma das listas está vazia)\n";
+    std::cout << "\n-> TIPO: Caso de Borda (Uma das listas está vazia)\n";
     LinkedList m_vazia, m_cheia;
     m_cheia.head = new Node(10); m_cheia.head->next = new Node(20); m_cheia.size = 2;
 
@@ -177,7 +177,7 @@ int main(){
     limpar_lista_simples(cyList);
 
     // ---- 2. CASO NORMAL: COM CICLO ----
-    std::cout << "-> TIPO: Caso Normal (Lista com Ciclo de Floyd)\n";
+    std::cout << "\n-> TIPO: Caso Normal (Lista com Ciclo de Floyd)\n";
     LinkedList cyList2;
     cyList2.head = new Node(3);
     Node* cy_target = new Node(2); // Nó onde o ciclo vai apontar
@@ -197,7 +197,7 @@ int main(){
     limpar_lista_simples(cyList2);
 
     // ---- 3. CASO DE BORDA: LISTA VAZIA ----
-    std::cout << "-> TIPO: Caso de Borda (Lista Vazia para verificacao de ciclo)\n";
+    std::cout << "\n-> TIPO: Caso de Borda (Lista Vazia para verificacao de ciclo)\n";
     LinkedList cy_vazia;
     std::cout << "Resultado (Esperado: 0 - Falso): " << tem_ciclo(cy_vazia) << "\n";
 

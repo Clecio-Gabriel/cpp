@@ -7,9 +7,9 @@
 
 - [ ] inverte()
 - [X] rotaciona()
-- [ ] enqueue_priority()
+- [X] enqueue_priority()
 - [X] merge()
-- [ ] tem_ciclo()
+- [X] tem_ciclo()
 
 ## PARA EXECUTAR:
 

@@ -32,6 +32,7 @@ struct DNode {
 struct DLinkedList {
     DNode* head = nullptr;
     DNode* tail = nullptr;
+    DNode* priority_tail = nullptr;
     int size = 0;
 };
 
