@@ -5,9 +5,9 @@
 
 //MUDE ALGUM CASO PARA "YES" PARA TESTAR ALGUM CASO ESPECÍFICO
 #define INVERTE NO
-#define ROTACIONA NO
+#define ROTACIONA YES
 #define ENQUEUE_PRIORITY NO
-#define MERGE NO
+#define MERGE YES
 #define TEM_CICLO NO
 
 int main(){
@@ -71,13 +71,13 @@ int main(){
     limpar_lista_circular(c1);
 
     // ---- 2. CASO DE BORDA: LISTA VAZIA ----
-    std::cout << "-> TIPO: Caso de Borda (Lista Circular Vazia)\n";
+    std::cout << "\n-> TIPO: Caso de Borda (Lista Circular Vazia)\n";
     CircList c_vazia;
     rotaciona(c_vazia, 3); // Não deve quebrar/dar SegFault
     std::cout << "Resultado (Esperado: executado sem falhas de segmentacao)\n";
 
     // ---- 3. CASO DE BORDA: K MAIOR QUE O TAMANHO (Otimização k mod n) ----
-    std::cout << "-> TIPO: Caso de Borda (k maior que o tamanho da lista)\n";
+    std::cout << "\n-> TIPO: Caso de Borda (k maior que o tamanho da lista)\n";
     CircList c2;
     Node* x1 = new Node(10); Node* x2 = new Node(20); Node* x3 = new Node(30);
     x1->next = x2; x2->next = x3; x3->next = x1;

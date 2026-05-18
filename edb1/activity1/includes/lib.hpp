@@ -41,12 +41,12 @@ struct CircList {
     int size = 0;
 };
 
-//  DEBUGGING METHODS (WASN'T IMPLEMENTED BY ME)
+//===DEBUGGING METHODS TO AVOID MEMORY LEAKS (WASN'T IMPLEMENTED BY ME)
 void limpar_lista_simples(LinkedList& l);
 void limpar_lista_dupla(DLinkedList& l);
 void limpar_lista_circular(CircList& c);
 
-//======= QUESTIONS
+//======= QUESTIONS =================================================
 
 // [ 1 ] INVERTE()
 //===TIME COMPLEXITY: O(n)

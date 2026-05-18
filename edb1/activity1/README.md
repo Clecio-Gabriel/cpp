@@ -1,4 +1,17 @@
-**PARA EXECUTAR:**
+# INFORMAÇÕES PESSOAIS:
+
+- Nome: *Clécio Gabriel de Oliveira Félix*
+- Email: *clecio.gabriel.felix.017@ufrn.edu.br*
+
+## MÉTODOS IMPLEMENTADOS
+
+- [ ] inverte()
+- [X] rotaciona()
+- [ ] enqueue_priority()
+- [X] merge()
+- [ ] tem_ciclo()
+
+## PARA EXECUTAR:
 
 ``P.S.: É necessário ter o CMake baixado.``
 
