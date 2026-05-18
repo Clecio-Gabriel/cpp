@@ -5,7 +5,7 @@
 
 ## MÉTODOS IMPLEMENTADOS
 
-- [ ] inverte()
+- [X] inverte()
 - [X] rotaciona()
 - [X] enqueue_priority()
 - [X] merge()

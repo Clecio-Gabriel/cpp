@@ -4,12 +4,27 @@
 //===TIME COMPLEXITY: O(n)
 //===SPACE COMPLEXITY: O(1)
 void inverte(LinkedList& l){
-    // CASE: Empty List
-    if (l.head==nullptr){
+    // CASE: Empty List or with only one element
+    if (l.head==nullptr or l.head->next==nullptr){
         return;
     }
     
-    
+    Node* prev {nullptr};
+    Node* curr {l.head};
+    Node* next {l.head->next};
+
+    while (curr!=nullptr){
+        curr->next = prev;
+        prev = curr;
+
+        curr = next;
+
+        if (next==nullptr) break;
+        next = next->next;
+    }
+
+    l.head = prev;
+
 }
 
 // [ 2 ] ROTACIONA()

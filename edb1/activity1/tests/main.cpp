@@ -1,7 +1,7 @@
 #include "lib.hpp"
 
 //MUDE ALGUM CASO PARA "YES" PARA TESTAR ALGUM CASO ESPECÍFICO
-#define INVERTE NO
+#define INVERTE YES
 #define ROTACIONA YES
 #define ENQUEUE_PRIORITY YES
 #define MERGE YES
@@ -29,13 +29,13 @@ int main(){
     limpar_lista_simples(l1); // Evita leak do caso normal
 
     // ---- 2. CASO DE BORDA: LISTA VAZIA ----
-    std::cout << "-> TIPO: Caso de Borda (Lista Vazia)\n";
+    std::cout << "\n-> TIPO: Caso de Borda (Lista Vazia)\n";
     LinkedList l_vazia; // head = nullptr, size = 0
     inverte(l_vazia);
     std::cout << "Invertida (Esperado: nullptr): " << (l_vazia.head == nullptr ? "nullptr\n" : "ERRO (nao e nulo)\n");
 
     // ---- 3. CASO DE BORDA: APENAS UM ELEMENTO ----
-    std::cout << "-> TIPO: Caso de Borda (Lista com apenas 1 elemento)\n";
+    std::cout << "\n-> TIPO: Caso de Borda (Lista com apenas 1 elemento)\n";
     LinkedList l_unica;
     l_unica.head = new Node(99);
     l_unica.size = 1;
