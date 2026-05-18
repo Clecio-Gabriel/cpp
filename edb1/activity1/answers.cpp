@@ -9,14 +9,14 @@ void inverte(LinkedList& l){
         return;
     }
     
-
+    
 }
 
 // [ 2 ] ROTACIONA()
 //===TIME COMPLEXITY: O(k mod n)
 //===SPACE COMPLEXITY: O(1)
 void rotaciona(CircList& c, int k){
-    //CASE: Empty List
+    // CASE: Empty List
     if (c.tail==nullptr){
         return;
     }
@@ -40,6 +40,7 @@ void enqueue_priority(DLinkedList& l, int data, int priority){
     DNode* temp = new DNode (data, priority);
     l.size++;
     
+    // CASE: Empty List
     if (l.head == nullptr){
         l.head = temp;
         l.tail = temp;
@@ -74,7 +75,7 @@ void enqueue_priority(DLinkedList& l, int data, int priority){
             if (l.priority_tail->next == nullptr){
                 l.tail = temp;
             }
-            
+
             else{
                 l.priority_tail->next->prev = temp;
                 temp->next = l.priority_tail->next;
@@ -131,7 +132,7 @@ LinkedList merge(LinkedList& a, LinkedList& b){
 //===SPACE COMPLEXITY: O(1)
 bool tem_ciclo(const LinkedList& l){
 
-    //  if emptylist or list with only one element that doesn't cycle
+    //  if empty list or list with only one element that doesn't cycle
     if (l.head==nullptr or l.head->next==nullptr){
         return false;
     }
