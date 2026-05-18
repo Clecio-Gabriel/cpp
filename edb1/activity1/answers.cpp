@@ -1,5 +1,8 @@
 #include "lib.hpp"
 
+#define TORTOISEHAREAPPROACH YES
+#define BRUTEAPPROACH NO
+
 // [ 1 ] INVERTE()
 //===TIME COMPLEXITY: O(n)
 //===SPACE COMPLEXITY: O(1)
@@ -137,17 +140,34 @@ bool tem_ciclo(const LinkedList& l){
         return false;
     }
 
-    auto slow {l.head};
-    auto fast {l.head};
+    #if TORTOISEHAREAPPROACH
+        auto slow {l.head};
+        auto fast {l.head};
 
-    while (fast != nullptr and fast->next!=nullptr){
-        fast = fast->next->next;
-        slow = slow->next;
+        while (fast != nullptr and fast->next!=nullptr){
+            fast = fast->next->next;
+            slow = slow->next;
 
-        if (fast==slow){
+            if (fast==slow){
+                return true;
+            }
+        }
+        
+        return false;
+    #endif
+    
+    #if BRUTEAPPROACH
+        auto obj {l.head};
+
+        for (int i = 0; i < (l.size-1); i++){
+            obj = obj -> next;
+        }
+
+        if (obj -> next != nullptr){
             return true;
         }
-    }
 
-    return false;
+        return false;
+    #endif
+
 }

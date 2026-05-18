@@ -1,8 +1,5 @@
 #include "lib.hpp"
 
-#define YES 1
-#define NO 0
-
 //MUDE ALGUM CASO PARA "YES" PARA TESTAR ALGUM CASO ESPECÍFICO
 #define INVERTE NO
 #define ROTACIONA YES

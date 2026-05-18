@@ -4,6 +4,9 @@
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE 1
 
+#define YES 1
+#define NO 0
+
 #include <iostream> 
 #include <stdexcept>
 
