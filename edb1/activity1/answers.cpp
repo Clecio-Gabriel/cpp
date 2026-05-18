@@ -130,8 +130,6 @@ LinkedList merge(LinkedList& a, LinkedList& b){
 // [ 5 ] TEM_CICLO()    
 //===TIME COMPLEXITY: O(n)
 //===SPACE COMPLEXITY: O(1)
-#define TORTOISEHAREAPPROACH YES
-#define BRUTEAPPROACH NO
 bool tem_ciclo(const LinkedList& l){
 
     //  if empty list or list with only one element that doesn't cycle
@@ -139,34 +137,18 @@ bool tem_ciclo(const LinkedList& l){
         return false;
     }
 
-    #if TORTOISEHAREAPPROACH
-        auto slow {l.head};
-        auto fast {l.head};
+    auto slow {l.head};
+    auto fast {l.head};
 
-        while (fast != nullptr and fast->next!=nullptr){
-            fast = fast->next->next;
-            slow = slow->next;
+    while (fast != nullptr and fast->next!=nullptr){
+        fast = fast->next->next;
+        slow = slow->next;
 
-            if (fast==slow){
-                return true;
-            }
-        }
-        
-        return false;
-    #endif
-    
-    #if BRUTEAPPROACH
-        auto obj {l.head};
-
-        for (int i = 0; i < (l.size-1); i++){
-            obj = obj -> next;
-        }
-
-        if (obj -> next != nullptr){
+        if (fast==slow){
             return true;
         }
-
-        return false;
-    #endif
+    }
+    
+    return false;
 
 }
