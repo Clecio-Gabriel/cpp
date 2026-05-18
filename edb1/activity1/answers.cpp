@@ -1,8 +1,5 @@
 #include "lib.hpp"
 
-#define TORTOISEHAREAPPROACH YES
-#define BRUTEAPPROACH NO
-
 // [ 1 ] INVERTE()
 //===TIME COMPLEXITY: O(n)
 //===SPACE COMPLEXITY: O(1)
@@ -133,6 +130,8 @@ LinkedList merge(LinkedList& a, LinkedList& b){
 // [ 5 ] TEM_CICLO()    
 //===TIME COMPLEXITY: O(n)
 //===SPACE COMPLEXITY: O(1)
+#define TORTOISEHAREAPPROACH YES
+#define BRUTEAPPROACH NO
 bool tem_ciclo(const LinkedList& l){
 
     //  if empty list or list with only one element that doesn't cycle
